@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Doto:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+nav{
+    font-family: "Doto", sans-serif;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+
+
+    color: white;
+    backdrop-filter: blur(15px);
+    background: #0003;
+ /* //   background-color: rgba(0,0,0,0.6); */
+ /* background: url('/images/blur.png'); */
+    width: 100%;
+    height: 8vh;
+    z-index: 999;
+
+
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+}
+
+.logo{
+    color: white;
+    font-size: 1.5em;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    margin-left: -20px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 858px){
+    nav{
+        height: 10vh;
+        
+    }
+    .logo{
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 2em;
+        padding-left: 50px;
+    }
+    .checkbtn{
+        display: block;
+    }
+    nav ul{
+        
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        background-color: #022962;
+        transition: all .5s;
+        
+    }
+    nav ul li{
+        margin: 50px 0;
+        display: block;
+
+    }
+
+    #check:checked~ul{
+        left: 0;    
+    }
+}
+

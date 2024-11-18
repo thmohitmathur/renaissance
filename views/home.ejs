@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/home.css">
+    <title>Document</title> 
+   
+</head>
+<body>
+
+    <div id="preloader"></div>
+
+    <%- include("partials/header.ejs")  %>
+
+ <section class="bg1">
+    <div class="parallax">
+        <h2 id="text">Renaissance</h2>
+    </div>
+ </section>
+
+ <div class="sich">
+  <img src="/images/sich.png" alt="">
+ </div>
+
+ <div class="cir">
+  <img class="autoRotate" src="/images/cir.png" alt="">
+ </div>
+
+ <section id="abou" class="about">
+    <div class="data" >
+        <div class="autoShow heading"><p>About Renaissance</p></div>
+        <div class="autoShow para"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas mollitia temporibus hic deserunt, dolores odio. Inventore, ea dolores alias rerum explicabo similique. Quia ullam error delectus, optio officia sint minima atque excepturi iure iste necessitatibus eligendi consequatur labore adipisci rerum? Amet impedit consequatur, cupiditate illo nostrum alias voluptas quam dignissimos odit dolorum consequuntur delectus itaque esse non repudiandae sed obcaecati necessitatibus totam unde ipsa hic fugit eum. Assumenda quo fugit laudantium reprehenderit voluptatibus accusantium rem laborum totam numquam ducimus ipsum molestias officiis eveniet facere quos qui possimus cupiditate cum, vel quod. Quam aliquam voluptatibus quasi omnis, molestiae vero consequuntur culpa eum, necessitatibus explicabo deserunt illum dolore, qui error beatae unde magni voluptatum. Exercitationem animi molestiae labore quae rerum, voluptatem cum voluptas incidunt, veniam laborum magnam, vitae enim assumenda maxime ipsum.</p></div>
+
+    </div>
+ </section>
+   
+ <section class="slider-container">
+    <h2 class="autoShow starHeading">Our Stars</h2>
+    <div class="slider-images">
+      <div class="slider-img">
+        <img src="/images/1.png" alt="1" />
+        <h1>Mike</h1>
+        <div class="details">
+          <h2>Mike</h2>
+          <p>Bassist</p>
+        </div>
+      </div>
+      <div class="slider-img">
+        <img src="/images/2.png" alt="2" />
+        <h1>samite</h1>
+        <div class="details">
+          <h2>samite</h2>
+          <p>Drummer</p>
+        </div>
+      </div>
+      <div class="slider-img">
+        <img src="/images/3.png" alt="3" />
+        <h1>hashi</h1>
+        <div class="details">
+          <h2>hashi</h2>
+          <p>Guitarist</p>
+        </div>
+      </div>
+      <div class="slider-img active">
+        <img src="/images/4.png" alt="4" />
+        <h1>kaity</h1>
+        <div class="details">
+          <h2>kaity</h2>
+          <p>Dj</p>
+        </div>
+      </div>
+      <div class="slider-img">
+        <img src="/images/5.png" alt="5" />
+        <h1>lauren</h1>
+        <div class="details">
+          <h2>lauren</h2>
+          <p>Judge</p>
+        </div>
+      </div>
+      <div class="slider-img">
+        <img src="/images/6.png" alt="6" />
+        <h1>ryan</h1>
+        <div class="details">
+          <h2>ryan</h2>
+          <p>Vice-Lead</p>
+        </div>
+      </div>
+      <div class="slider-img">
+        <img src="/images/7.png" alt="7" />
+        <h1>dakes</h1>
+        <div class="details">
+          <h2>dakes</h2>
+          <p>Leader</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <%- include("partials/footer.ejs")  %>
+  
+  <script src="/jss/jQuery.js"></script>
+  <script>
+    jQuery(document).ready(function ($) {
+      $(".slider-img").on("click", function () {
+        $(".slider-img").removeClass("active");
+        $(this).addClass("active");
+      });
+    });
+
+    let text = document.querySelector("text");
+
+    window.addEventListener("scroll", ()=> {
+      let value = window.scrollY;
+      text.style.marginTop = value *2.5 + 'px';
+    });
+
+    var loader = document.getElementById("preloader");
+
+    window.addEventListener("load", function(){
+      loader.style.display = "none";
+    })
+  </script>
+</body>
+</html>
